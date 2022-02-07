@@ -1,4 +1,6 @@
-" testing this one!!!!!!!!!!!!!!!!
+call plug#begin()
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()
 "disable scroll jump for the * and the shift-leftclick
 " https://stackoverflow.com/questions/4256697/vim-search-and-highlight-but-do-not-jump
 nnoremap <silent> * :let @/= '\<' . expand('<cword>') . '\>' <bar> set hls <cr>
@@ -78,7 +80,7 @@ nnoremap <CR> :nohlsearch<cr>
 :cnoremap NG .\{-}
 
 "Rip grep remaps
-nnoremap <Leader>rg :Rg -g "!*main.css*"
+nnoremap <Leader>rg :Rg -g "!*main.css*" ''<Left>
 "rip grep replace in quickfix
 nnoremap <Leader>rgr :cdo %s###gc<Left><Left><Left>
 "fuzzy find remaps
