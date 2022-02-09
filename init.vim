@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 "disable scroll jump for the * and the shift-leftclick
 " https://stackoverflow.com/questions/4256697/vim-search-and-highlight-but-do-not-jump
